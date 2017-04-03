@@ -4,17 +4,73 @@ body {
 	padding-right: 100px;
 }
 
-.boxes
-{
+header, nav, section, aside {
 	background-color: #909090;
 	border: 10px solid #909090;
 	border-radius: 10px;
 	box-shadow: 12px 12px 5px #252424;
 }
-.upper_box
+header
 {
-	/*display: flex;*/
+	width: 1500px;
+	height: 120px;
+	margin-top: 20px;
+}
+
+nav {
+	float: left;
+	width : 130px;
+	height: 470px;
+	margin-left: 40px;
+    margin-top: 20px;
+}
+nav img, aside img, .brick {
 	margin: auto;
-	width: 1200px;
-	height: 130px;
+    display: block;
+	margin-top: 10px;
+	width: 80px;
+}
+section {
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+aside {
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+	width : 130px;
+	height: 470px;
+}
+img[title="Day of the 42"] {
+    float: left;
+}
+img[title="Loupe"] {
+    position: relative;
+    left: 770px;
+    top: 5px;
+}
+img[title="Close"] {
+    position: relative;
+    left: 770px;
+    bottom: 20px;
+}
+img[title="Reload"] {
+    float: right;
+}
+img[title="Main"] {
+}
+img[title="Oeil"] {
+    border: solid red 5px;
+    border-radius: 5px;
+}
+img[title="Chat"] {
+}
+img[title="Arrow"] {
+}
+.brick {
+	background-image: url("./resources/brick.jpg");
+	background-repeat: repeat;
+	width: 130px;
+	height: 80px;
 }
