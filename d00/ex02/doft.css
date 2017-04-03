@@ -1,10 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   doft.css                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsabbah <nsabbah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/03 19:33:53 by nsabbah           #+#    #+#             */
+/*   Updated: 2017/04/03 19:34:02 by nsabbah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 body {
 	background-color: #505050;
-	padding-left: 100px;
-	padding-right: 100px;
 }
 
-header, nav, section, aside {
+#wrapper {
+    width: 1525px;
+    margin: 0 auto;
+}
+
+header, nav, section, aside, .form_area {
 	background-color: #909090;
 	border: 10px solid #909090;
 	border-radius: 10px;
@@ -21,7 +36,7 @@ nav {
 	float: left;
 	width : 130px;
 	height: 470px;
-	margin-left: 40px;
+	margin-left: 60px;
     margin-top: 20px;
 }
 nav img, aside img, .brick {
@@ -42,35 +57,52 @@ aside {
 	width : 130px;
 	height: 470px;
 }
+.form_area {
+	background-color: #88ff89;
+	border: 1px solid black;
+    width: 450px;
+    height: 130px;
+    position: absolute;
+    top: 700px;
+	padding: 15px;
+	padding-top: 20px;
+	font-family: arial;
+}
 img[title="Day of the 42"] {
     float: left;
+	width: 450px;
 }
 img[title="Loupe"] {
     position: relative;
     left: 770px;
     top: 5px;
 }
-img[title="Close"] {
+img[alt="Close"] {
     position: relative;
     left: 770px;
     bottom: 20px;
 }
-img[title="Reload"] {
+img[alt="Reload"] {
     float: right;
+	width: 20px;
 }
-img[title="Main"] {
-}
-img[title="Oeil"] {
+img[title="Regarder"] {
     border: solid red 5px;
     border-radius: 5px;
-}
-img[title="Chat"] {
-}
-img[title="Arrow"] {
 }
 .brick {
 	background-image: url("./resources/brick.jpg");
 	background-repeat: repeat;
 	width: 130px;
 	height: 80px;
+}
+input[type="text"] {
+	width: 350px;
+}
+strong {
+	font-size: 30px;
+	font-weight: 100;
+}
+.ordis {
+	text-shadow: 14px 5px 5px rgba(255, 0, 0, 0.91);
 }

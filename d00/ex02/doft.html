@@ -1,34 +1,55 @@
+<!--
+                                                          :::      ::::::::
+     doft.html                                          :+:      :+:    :+:
+                                                      +:+ +:+         +:+
+     By: nsabbah <nsabbah@student.42.fr>            +#+  +:+       +#+
+                                                  +#+#+#+#+#+   +#+
+     Created: 2017/04/03 19:33:43 by nsabbah           #+#    #+#
+     Updated: 2017/04/03 19:33:48 by nsabbah          ###   ########.fr
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Day of the 42</title>
-<link href="doft.css" rel="stylesheet" type="text/css"/>
+	<title>Day of the 42</title>
+	<link href="doft.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<header>
-		<img src="./resources/day_of_the_42.png" alt="Day of the 42"
-				title="Day of the 42" width="450px" float="left"/>
-		<img src="./resources/loupe.png" alt="Loupe"
-				title="Loupe"/>
-		<img src="./resources/reload.png" alt="Reload"
-				title="Reload" width="20px"/>
-		<img src="./resources/close.gif" alt="Close"
-				title="Close" width="20px"/>
-	</header>
-	<nav>
-		<img src="./resources/arrow.png"  alt="Arrow" title ="Arrow"/>
-		<img src="./resources/main.png"  alt="Main" title ="Main"/>
-		<img src="./resources/oeil.png"  alt="Oeil" title ="Oeil"/>
-		<img src="./resources/outil.png"  alt="Outil" title ="Outil"/>
-		<img src="./resources/chat-icon.png"  alt="Chat" title ="Chat"/>
-	</nav>
-	<section>
-		<img src="./resources/cluster.jpg" alt="Cluster" title="Cluster" />
-	</section>
-	<aside>
-		<img src="./resources/book.png" alt="Book" title="Book" />
-		<img src="./resources/towel.png" alt="Towel" title="Towel" />
-		<div class=brick></div>
-	</aside>
+	<div id="wrapper">
+		<header>
+			<img src="./resources/day_of_the_42.png" alt="Day of the 42" title="Day of the 42"/>
+			<img src="./resources/loupe.png" alt="Loupe" title="Loupe"/>
+			<a href="http://www.disney.com"><img src="./resources/reload.png" alt="Reload" title="Recommencer au début"/></a>
+			<a href="http://www.relaischateaux.com."><img src="./resources/close.gif" alt="Close" title="Déconnecter" width="20px"/></a>
+		</header>
+		<nav>
+			<img src="./resources/arrow.png"  alt="Avancer" title ="Avancer"/>
+			<img src="./resources/main.png"  alt="Prendre" title ="Prendre"/>
+			<img src="./resources/oeil.png"  alt="Regarder" title ="Regarder"/>
+			<img src="./resources/outil.png"  alt="Utiliser" title ="Utiliser"/>
+			<img src="./resources/chat-icon.png"  alt="Parler" title ="Parler"/>
+		</nav>
+		<section>
+			<img src="./resources/cluster.jpg" alt="Cluster" title="Cluster" usemap="#cluster"/>
+			<map name="cluster">
+				<area shape="rect" coords="320,320,470,550" alt="chair" href="http://www.ikea.com"/>
+				<area shape="rect" coords="804,320,1000,460" alt="chair" href="http://www.apple.com"/>
+			</map>
+		</section>
+		<aside>
+			<img src="./resources/book.png" alt="Book" title="Book" />
+			<img src="./resources/towel.png" alt="Towel" title="Towel" />
+			<div class=brick></div>
+		</aside>
+		<div class="form_area">
+			Vous <strong>entrez</strong> dans une grande piece remplie d'<span class="ordis">ordinateurs</span>...
+			<br />
+			<i>-Bonjour, vous êtes nouveau ici ?</i>
+			<form>
+				<input type="text"/>
+				<input type="submit" value="Repondre" />
+			</form>
+		</div>
+	</div>
 </body>
 </html>
