@@ -6,7 +6,7 @@
 /*   By: nsabbah <nsabbah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 19:33:53 by nsabbah           #+#    #+#             */
-/*   Updated: 2017/04/03 19:34:02 by nsabbah          ###   ########.fr       */
+/*   Updated: 2017/04/04 10:19:58 by nsabbah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ aside {
     top: 700px;
 	padding: 15px;
 	padding-top: 20px;
-	font-family: arial;
+	font-family: Verdana;
 }
 img[title="Day of the 42"] {
     float: left;
@@ -90,6 +90,12 @@ img[title="Regarder"] {
     border: solid red 5px;
     border-radius: 5px;
 }
+form[type="submit"] {
+	border: 1px solid grey;
+    background-color: white;
+    font-family: Arial;
+    border-radius: 2px;
+}
 .brick {
 	background-image: url("./resources/brick.jpg");
 	background-repeat: repeat;
@@ -98,10 +104,11 @@ img[title="Regarder"] {
 }
 input[type="text"] {
 	width: 350px;
-}
+    border-top: 2px solid #9a9b9c;}
 strong {
-	font-size: 30px;
-	font-weight: 100;
+    font-size: 186%;
+    font-weight: lighter;
+    font-family: Georgia;
 }
 .ordis {
 	text-shadow: 14px 5px 5px rgba(255, 0, 0, 0.91);
