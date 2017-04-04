@@ -6,7 +6,7 @@
 /*   By: nsabbah <nsabbah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 19:33:53 by nsabbah           #+#    #+#             */
-/*   Updated: 2017/04/04 10:19:58 by nsabbah          ###   ########.fr       */
+/*   Updated: 2017/04/04 21:26:27 by nsabbah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,12 +90,19 @@ img[title="Regarder"] {
     border: solid red 5px;
     border-radius: 5px;
 }
-form[type="submit"] {
-	border: 1px solid grey;
-    background-color: white;
-    font-family: Arial;
-    border-radius: 2px;
+
+.bouton {
+	border: 1px solid #a8a4a5 ;
+	border-radius: 1px;
+	background-color: #f4eff3 ;
+	background: #0079FF ;
+	margin-left: 4px;
+	height: 22px;
+	font-size:12px;
+	letter-spacing: 1px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4eff3 ), to(#dcdcdc ));
 }
+
 .brick {
 	background-image: url("./resources/brick.jpg");
 	background-repeat: repeat;
