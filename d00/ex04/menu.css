@@ -6,13 +6,13 @@
 /*   By: nsabbah <nsabbah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 20:22:13 by nsabbah           #+#    #+#             */
-/*   Updated: 2017/04/03 21:32:51 by nsabbah          ###   ########.fr       */
+/*   Updated: 2017/04/04 20:08:36 by nsabbah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 @font-face {
   font-family: "Campton";
-  src: url("//cdn.shopify.com/s/files/1/0249/9003/t/7/assets/campton-black.woff2") format("woff2"), url("//cdn.shopify.com/s/files/1/0249/9003/t/7/assets/campton-black.woff") format("woff");
+  src: url("http://cdn.shopify.com/s/files/1/0249/9003/t/7/assets/campton-black.woff2") format("woff2"), url("http://cdn.shopify.com/s/files/1/0249/9003/t/7/assets/campton-black.woff") format("woff");
   font-weight: 900;
   font-style: normal; }
 
@@ -34,20 +34,16 @@
     position: relative;
     display: inline-block;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-	background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 .dropdown-content a {
     color: white;
-	font-family: Campton;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-family: "Campton", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
 }
 
 a:hover {
@@ -55,4 +51,13 @@ a:hover {
 }
 .dropdown:hover .dropdown-content {
     display: block;
+}
+.dropdown-content {
+    display: none;
+    position: relative;
+    left: -50px;
+	background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }

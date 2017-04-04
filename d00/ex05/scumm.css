@@ -1,0 +1,115 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   doft.css                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsabbah <nsabbah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/03 19:33:53 by nsabbah           #+#    #+#             */
+/*   Updated: 2017/04/04 10:19:58 by nsabbah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+body {
+	background-color: #505050;
+}
+
+#wrapper {
+    width: 1525px;
+    margin: 0 auto;
+}
+
+header, nav, section, aside, .form_area {
+	background-color: #909090;
+	border: 10px solid #909090;
+	border-radius: 10px;
+	box-shadow: 12px 12px 5px #252424;
+}
+header
+{
+	width: 1500px;
+	height: 120px;
+	margin-top: 20px;
+}
+
+nav {
+	float: left;
+	width : 130px;
+	height: 470px;
+	margin-left: 60px;
+    margin-top: 20px;
+}
+nav img, aside img, .brick {
+	margin: auto;
+    display: block;
+	margin-top: 10px;
+	width: 80px;
+}
+section {
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+aside {
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+	width : 130px;
+	height: 470px;
+}
+.form_area {
+	background-color: #88ff89;
+	border: 1px solid black;
+    width: 450px;
+    height: 130px;
+    position: absolute;
+    top: 700px;
+	padding: 15px;
+	padding-top: 20px;
+	font-family: Verdana;
+}
+img[title="Day of the 42"] {
+    float: left;
+	width: 450px;
+}
+img[title="Loupe"] {
+    position: relative;
+    left: 770px;
+    top: 5px;
+}
+img[alt="Close"] {
+    position: relative;
+    left: 770px;
+    bottom: 20px;
+}
+img[alt="Reload"] {
+    float: right;
+	width: 20px;
+}
+img[title="Regarder"] {
+    border: solid red 5px;
+    border-radius: 5px;
+}
+form[type="submit"] {
+	border: 1px solid grey;
+    background-color: white;
+    font-family: Arial;
+    border-radius: 2px;
+}
+.brick {
+	background-image: url("./resources/brick.jpg");
+	background-repeat: repeat;
+	width: 130px;
+	height: 80px;
+}
+input[type="text"] {
+	width: 350px;
+    border-top: 2px solid #9a9b9c;}
+strong {
+    font-size: 186%;
+    font-weight: lighter;
+    font-family: Georgia;
+}
+.ordis {
+	text-shadow: 14px 5px 5px rgba(255, 0, 0, 0.91);
+}
