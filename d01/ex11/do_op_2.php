@@ -2,7 +2,9 @@
 <?php
 function do_op ($nb1, $op, $nb2)
 {
-if ($op == "%")
+if (($op == "/" || $op == "%") && !$nb2)
+	exit_syntax();
+else if ($op == "%")
 	$result = $nb1 % $nb2;
 else if ($op == "+")
 	$result = $nb1 + $nb2;
@@ -12,8 +14,6 @@ else if ($op == "-")
 	$result = $nb1 - $nb2;
 else if ($op == "/" && $nb2)
 	$result = $nb1 / $nb2;
-else if ($op == "/" && !$nb2)
-	exit_syntax();
 return $result;
 }
 ?>

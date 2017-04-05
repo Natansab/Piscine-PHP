@@ -43,5 +43,4 @@ $timestamp = mktime($hour, $minute, $second, $month, $day, $year);
 if (date("w", $timestamp) != $wday)
 	wrong_format() ;
 echo $timestamp;
-
 ?>
