@@ -6,14 +6,14 @@
 #    By: nsabbah <nsabbah@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/05 18:33:41 by nsabbah           #+#    #+#              #
-#    Updated: 2017/04/05 18:33:55 by nsabbah          ###   ########.fr        #
+#    Updated: 2017/04/05 20:52:47 by nsabbah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 echo "#!/usr/bin/php
 <?php
 include(\"ex03/ft_split.php\");
-print_r(ft_split(\"		Hello      World 			AAA	   \"));
+print_r(ft_split(\"      Hello      World  AAA   \"));
 ?>" > main.php
 chmod 755 main.php
 
@@ -47,9 +47,9 @@ printf "\e[0;32m\n\n################## EX03 ##############\n \e[0m\n"
 echo "\n"
 echo "Array$
 ($
-    [0] => Hello$
-    [1] => World$
-    [2] => AAA$
+    [0] => AAA$
+    [1] => Hello$
+    [2] => World$
 )$"
 
 printf "\e[0;32m\n\n################## EX04 ##############\n \e[0m\n"
@@ -78,7 +78,7 @@ printf "\e[0;32m\n\n################## EX05 ##############\n \e[0m\n"
 
 	echo "TEST4"
 	$@ ./ex05/epur_str.php "   "| cat -e
-	echo "$"
+	echo "Ok if nothing displayed"
 	echo "\n"
 
 printf "\e[0;32m\n\n################## EX06 ##############\n \e[0m\n"
@@ -135,11 +135,11 @@ printf "\e[0;32m\n\n################## EX10 ##############\n \e[0m\n"
 	echo "\n"
 	echo "TEST4"
 	$@ ./ex10/do_op.php " -20" " /" " 0" | cat -e
-	echo "Incorrect Parameters$"
+	echo "Warning: Division by zero[..]$"
 	echo "\n"
 	echo "TEST5"
 	$@ ./ex10/do_op.php " -20" " %" " 0" | cat -e
-	echo "Incorrect Parameters$"
+	echo "Warning: Division by zero[..]$"
 	echo "\n"
 
 printf "\e[0;32m\n\n################## EX11 ##############\n \e[0m\n"

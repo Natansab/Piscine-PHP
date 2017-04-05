@@ -1,7 +1,11 @@
 <?php
 function ft_split($string)
 {
-	$my_array = preg_split("/[\s]+/", $string, 0, PREG_SPLIT_NO_EMPTY);
-	return $my_array;
+	$my_array = array_filter(explode(" ", $string));
+	if (count($my_array) > 0)
+	{
+		sort($my_array);
+		return $my_array;
+	}
 }
 ?>

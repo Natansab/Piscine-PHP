@@ -2,9 +2,7 @@
 <?php
 if ($argc != 2)
 	return;
-while (strstr($argv[1], "  "))
-	$argv[1] = str_replace("  ", " ", $argv[1]);
-$argv[1] = ltrim($argv[1]);
-$argv[1] = rtrim($argv[1]);
-echo "$argv[1]\n";
+$my_array = array_filter(explode(" ", $argv[1]));
+if (count($my_array) > 0)
+	echo implode(" ", $my_array)."\n";
 ?>
