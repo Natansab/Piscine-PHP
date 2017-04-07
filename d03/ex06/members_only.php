@@ -6,7 +6,7 @@ if ($_SERVER['PHP_AUTH_USER'] != "zaz" && $_SERVER['PHP_AUTH_PW'] != "jaimelespe
     exit;
 } else {
     echo "<html><body>
-Bonjour Zaz<br /><img src='data:image/png;base64,"
+Bonjour Zaz<br />\n<img src='data:image/png;base64,"
 .base64_encode(file_get_contents("../img/42.png"))."'></body></html>\n";
 }
 ?>
