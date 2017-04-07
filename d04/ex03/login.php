@@ -9,5 +9,4 @@ if (auth($login, $passwd)) {
 else {
 	echo "ERROR\n";
 	$_SESSION["loggued_on_user"] = "";}
-print_r($_SESSION);
 ?>
