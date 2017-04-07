@@ -1,5 +1,5 @@
 <?php
-if ($_POST["submit"] !== "OK" || $_POST["login"] === "" || !$_POST["passwd"]) === "" {
+if ($_POST["submit"] != "OK" || $_POST["login"] == "" || $_POST["passwd"] == "") {
 	echo "ERROR\n";
 	return ;
 }
