@@ -10,16 +10,15 @@ $info_arr = array(
 	"odlpw"	=> hash("whirlpool", $_POST['oldpw']),
 	"newpw"	=> hash("whirlpool", $_POST['newpw']),
 );
-$main_arr = unserialize(file_get_contents("../private/passwd"));
+$main_arr = unserialize(file_get_contents("./private/passwd"));
 foreach($main_arr as &$elem)
 	if ($elem["login"] === $info_arr["login"] &&
 					$elem["passwd"] === $info_arr["odlpw"])
 	{
 		$elem["passwd"] = $info_arr["newpw"];
-		file_put_contents("../private/passwd", serialize($main_arr));
+		file_put_contents("./private/passwd", serialize($main_arr));
 		header('Location: ./index.html');
 		return ;
 	}
 echo "ERROR\n";
-echo "<br  /><a href=\"./index.html\">Retour</a>";
 ?>

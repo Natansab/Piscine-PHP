@@ -1,4 +1,6 @@
 <?php
+session_start();
+$login = $_SESSION['loggued_on_user'];
 ?>
 
 <!DOCTYPE html>
@@ -8,14 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="./index.css"/>
 </head>
 <body>
-	<ul>
-		<li><a class="active" href="./index.php">Home</a></li>
-		<li><a href="./admin.php">Admin</a></li>
-		<li><a href="./cart.php">Cart</a></li>
-		<li><a href="./user/">Log In</a></li>
-	</ul>
 	<div id='wrapper'>
-		<h1>Homepage</h1>
+		<?php include('menu.php') ?>
 		<div id='prducts_section'>
 			<h1>All products</h1>
 			<?php

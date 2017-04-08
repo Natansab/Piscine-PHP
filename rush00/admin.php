@@ -1,4 +1,7 @@
 <?php
+session_start();
+$login = $_SESSION['loggued_on_user'];
+
 include './ft_tools.php';
 
 ## Handle delete product
@@ -36,8 +39,10 @@ if ($_POST['submit'] == 'Add') {
 <html>
 <head>
 	<title>Website Admin</title>
+	<link rel="stylesheet" type="text/css" href="./index.css"/>
 </head>
 <body>
+	<?php include('menu.php') ?>
 	<div id='wrapper'>
 		<h1>Admin Page</h1>
 		<div id='prducts_section'>

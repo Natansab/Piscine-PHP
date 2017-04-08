@@ -48,4 +48,12 @@ $fp = fopen('./tables/orders_table.csv', 'w');
 foreach($o_tab as $fields)
 	fputcsv($fp, $fields);
 fclose($fp);
+
+## Initial Cart Table
+$cart_arr = array('ID','User_ID','Products', 'Status');
+if (file_exists('./tables/carts_table.csv'))
+	unlink('./tables/carts_table.csv');
+$fp = fopen('./tables/carts_table.csv', 'w');
+fputcsv($fp, $cart_arr);
+fclose($fp);
 ?>
