@@ -1,59 +1,87 @@
 <?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "SHOP_DATABASE";
 
-## Check if the folder ./tables exists. If not creates it
-if (!file_exists('./tables'))
-	mkdir('./tables', 0777, true);
+// Gerer la suppression des bases de donnes.
 
-## Initial Products Table
-$p_tab = array (
-	array('ID', 'Category', 'Price', 'Name', 'Description', 'Img_path', 'Active'),
-	array(1, 'Truman', 15, 'Truman - Blue', 'The Truman handle is designed with a rubberized matte exterior, texturized grip pattern, and weighted core for maximum grip and control. It may be the best-looking thing in your bathroom (other than you.)', './img/truman_blue.jpg', 1),
-	array(2, 'Truman', 15, 'Truman - Green', 'The Truman handle is designed with a rubberized matte exterior, texturized grip pattern, and weighted core for maximum grip and control. It may be the best-looking thing in your bathroom (other than you.)', './img/truman_green.jpg', 1),
-	array(3, 'Truman', 15, 'Truman - Orange', 'The Truman handle is designed with a rubberized matte exterior, texturized grip pattern, and weighted core for maximum grip and control. It may be the best-looking thing in your bathroom (other than you.)', './img/truman_orange.jpg', 1),
-	array(4, 'Winston', 15, 'Winston - Silver', 'The ergonomic body is made of die-cast zinc and polished chrome for a handsome finish and a rubberized grip for optimal control. For a more personalized experience, get it engraved.', './img/winston_silver.jpg', 1),
-);
+$conn = mysqli_connect($servername, $username, $password);
 
-if (file_exists("./tables/products_table.csv"))
-	unlink('./tables/products_table.csv');
-$fp = fopen('./tables/products_table.csv', 'w');
-foreach($p_tab as $fields)
-	fputcsv($fp, $fields);
-fclose($fp);
+echo "<br  />";
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+echo "<br  />";
 
-## Initial Users Table
-$u_tab = array (
-	array('Login', 'Passwd', 'Name', 'Address', 'Orders', 'Admin'),
-	array('User1', 'HashedPasswd', 'Name1', 'Address1', '10-11', 1),
-	array('User2', 'HashedPasswd', 'Name2', 'Address2', '12', 0),
-);
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+echo "<br  />";
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}
+echo "<br  />";
 
-if (file_exists('./tables/users_table.csv'))
-	unlink('./tables/users_table.csv');
-$fp = fopen('./tables/users_table.csv', 'w');
-foreach($u_tab as $fields)
-	fputcsv($fp, $fields);
-fclose($fp);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+echo "<br  />";
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "<br  />";
 
-## Initial Orders Table
-$o_tab = array (
-	array('ID', 'User', 'Products', 'Total_price', 'Date_of_order', 'Status'),
-	array('10', 'User1', '2-1-1-4', 55, '-', 'Validated'),
-	array('11', 'User1', '2', 10, '-', 'Pending'),
-	array('12', 'User2', '2-3-1-4', 60, '-', 'Pending'),
-);
+// Set Products Table
+$sql = "CREATE TABLE IF NOT EXISTS Products (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+price INT(6) NOT NULL,
+name VARCHAR(30) NOT NULL,
+description TEXT NOT NULL,
+img_path CHAR(255) NOT NULL,
+is_active INT(1)
+)";
 
-if (file_exists('./tables/oders_table.csv'))
-	unlink('./tables/orders_table.csv');
-$fp = fopen('./tables/orders_table.csv', 'w');
-foreach($o_tab as $fields)
-	fputcsv($fp, $fields);
-fclose($fp);
+echo "<br  />";
+if (mysqli_query($conn, $sql)) {
+    echo "Table Products created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}
+echo "<br  />";
 
-## Initial Cart Table
-$cart_arr = array('ID','User_ID','Products', 'Status');
-if (file_exists('./tables/carts_table.csv'))
-	unlink('./tables/carts_table.csv');
-$fp = fopen('./tables/carts_table.csv', 'w');
-fputcsv($fp, $cart_arr);
-fclose($fp);
+// Set Customers Table
+$sql = "CREATE TABLE IF NOT EXISTS Customers (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+login CHAR(255) NOT NULL,
+password VARCHAR(50) NOT NULL,
+name CHAR(50) NOT NULL,
+address CHAR(255) NOT NULL,
+admin INT(1)
+)";
+
+echo "<br  />";
+if (mysqli_query($conn, $sql)) {
+    echo "Table Customers created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}
+echo "<br  />";
+// Inserts elements
+$sql = "INSERT INTO Products (price, name, description, img_path, is_active)
+VALUES (15,'Truman - Blue','The Truman handle is designed (other than you.)','./img/truman_blue.jpg',1);";
+$sql .= "INSERT INTO Products (price, name, description, img_path, is_active)
+VALUES (15,'Truman - Green','The Truman handle (other than you.)','./img/truman_green.jpg',1);";
+$sql .= "INSERT INTO Products (price, name, description, img_path, is_active)
+VALUES (15,'Truman - Orange','The Truman handle (other than you.)','./img/truman_orange.jpg',0);";
+$sql .= "INSERT INTO Products (price, name, description, img_path, is_active)
+VALUES (15,'Winston - Silver','The Truman handle (other than you.)','./img/wilson_silver.jpg',0);";
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_multi_error($conn);
+}
+
+mysqli_close($conn);
 ?>
