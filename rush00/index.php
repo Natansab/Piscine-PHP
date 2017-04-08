@@ -5,8 +5,15 @@
 <html>
 <head>
 	<title>Shope Homepage</title>
+	<link rel="stylesheet" type="text/css" href="./index.css"/>
 </head>
 <body>
+	<ul>
+		<li><a class="active" href="./index.php">Home</a></li>
+		<li><a href="./admin.php">Admin</a></li>
+		<li><a href="./cart.php">Cart</a></li>
+		<li><a href="./user/">Log In</a></li>
+	</ul>
 	<div id='wrapper'>
 		<h1>Homepage</h1>
 		<div id='prducts_section'>
@@ -21,9 +28,16 @@
 					if ($flag) {
 						$flag = false;
 						continue;}
-					echo "Product Name: $data[3] <br />";
-					echo "Product Price: $data[2]$<br />";
-					echo "<br />";
+						?>
+					<div class='product'>
+
+					<img class='img_product' src=<?php echo $data[5] ?> /><br />
+					Product Name: <?php echo $data[3] ?> <br />
+					Product Price: <?php echo $data[2] ?>$<br />
+					Category: <?php echo $data[1] ?>
+					<br />
+					</div>
+					<?php
 				}
 				fclose($handle);}
 			?>

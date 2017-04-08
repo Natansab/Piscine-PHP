@@ -4,8 +4,6 @@ include './ft_tools.php';
 ## Handle delete product
 if ($_POST['submit'] == 'Delete') {
 	$id = $_POST['ID'];
-	// $line =  find_line_csv('./tables/products_table.csv', $_POST['ID']);
-	// echo "line is $line\n";
 	$new_p_line = array($id, $_POST['Category'], $_POST['Price'], $_POST['Name'], $_POST['Description'], $_POST['Image'], 0);
 	change_value_csv('./tables/products_table', $id, $new_p_line);
 }
@@ -13,7 +11,6 @@ if ($_POST['submit'] == 'Delete') {
 ## Handle modify product
 if ($_POST['submit'] == 'Modify') {
 	$id = $_POST['ID'];
-	// $line =  find_line_csv("./tables/orders_table.csv", $_POST['ID']);
 	$new_p_line = array($_POST['ID'], $_POST['Category'], $_POST['Price'], $_POST['Name'], $_POST['Description'], $_POST['Image'], 1);
 	change_value_csv('./tables/products_table', $id, $new_p_line);
 }
@@ -44,7 +41,8 @@ if ($_POST['submit'] == 'Add') {
 	<div id='wrapper'>
 		<h1>Admin Page</h1>
 		<div id='prducts_section'>
-			<h1>Manage Products</h1>
+			<h2>Products</h2>
+			<h3>Manage Existing Products</h3>
 			<?php
 			$row = 1;
 			if (file_exists('./tables/products_table.csv') &&
@@ -72,7 +70,7 @@ if ($_POST['submit'] == 'Add') {
 				}
 				fclose($handle);}
 			?>
-			<h1>Add Product</h1>
+			<h3>Add Product</h3>
 			<form action ="admin.php" method="POST">
 			<strong>New Product:</strong><br />
 			Category:		<input type ='text' name='Category' value='' required /><br />
@@ -87,5 +85,6 @@ if ($_POST['submit'] == 'Add') {
 
 		</div>
 	</div>
+	<a href="./index.php">Back to homepage</a>
 </body>
 </html>

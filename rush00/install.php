@@ -7,10 +7,10 @@ if (!file_exists('./tables'))
 ## Initial Products Table
 $p_tab = array (
 	array('ID', 'Category', 'Price', 'Name', 'Description', 'Img_path', 'Active'),
-	array(1, 'cat1', 15, 'Product1', 'Description1', 'img1', 1),
-	array(2, 'cat1', 10, 'Product2', 'Description2', 'img2', 0),
-	array(3, 'cat2', 15, 'Product3', 'Description3', 'img3', 1),
-	array(4, 'cat1', 15, 'Product4', 'Description4', 'img4', 1),
+	array(1, 'Truman', 15, 'Truman - Blue', 'The Truman handle is designed with a rubberized matte exterior, texturized grip pattern, and weighted core for maximum grip and control. It may be the best-looking thing in your bathroom (other than you.)', './img/truman_blue.jpg', 1),
+	array(2, 'Truman', 15, 'Truman - Green', 'The Truman handle is designed with a rubberized matte exterior, texturized grip pattern, and weighted core for maximum grip and control. It may be the best-looking thing in your bathroom (other than you.)', './img/truman_green.jpg', 1),
+	array(3, 'Truman', 15, 'Truman - Orange', 'The Truman handle is designed with a rubberized matte exterior, texturized grip pattern, and weighted core for maximum grip and control. It may be the best-looking thing in your bathroom (other than you.)', './img/truman_orange.jpg', 1),
+	array(4, 'Winston', 15, 'Winston - Silver', 'The ergonomic body is made of die-cast zinc and polished chrome for a handsome finish and a rubberized grip for optimal control. For a more personalized experience, get it engraved.', './img/winston_silver.jpg', 1),
 );
 
 if (file_exists("./tables/products_table.csv"))
