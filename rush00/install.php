@@ -68,6 +68,23 @@ if (mysqli_query($conn, $sql)) {
     echo "Error creating table: " . mysqli_error($conn);
 }
 echo "<br  />";
+
+// Set Orders Table
+$sql = "CREATE TABLE IF NOT EXISTS Customers (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+login VARCHAR(250) NOT NULL,
+nb_of_produtcs INT(100) NOT NULL,
+total INT(250) NOT NULL,
+date VARCHAR(250) NOT NULL
+)";
+
+echo "<br  />";
+if (mysqli_query($conn, $sql)) {
+    echo "Table Orders created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}
+echo "<br  />";
 // Inserts elements
 $sql = "INSERT INTO Products (price, name, description, img_path, is_active)
 VALUES (15,'Truman - Blue','The Truman handle is designed (other than you.)','./img/truman_blue.jpg',1);";
