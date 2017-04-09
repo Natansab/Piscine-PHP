@@ -8,7 +8,7 @@ if (isset($_SESSION['cart']))
 	<li><a href="./index.php">Home</a></li>
 	<li><a href="./admin.php">Admin</a></li>
 	<li><a href="./cart.php">Cart (<?php echo $nb_items ?>)</a></li>
-<?php if ($login) {
+<?php if (($login = $_SESSION["loggued_on_user"])) {
 	echo '<li><a href="./logout.php">Log Out</a></li>';
 	echo '<li class="welcome"> Bonjour '. $login . '</a></li>';
 }
