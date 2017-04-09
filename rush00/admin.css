@@ -1,0 +1,8 @@
+.manage_product_item {
+	float: left;
+	margin: 20px;
+}
+
+.add_product_box, .manage_product_box {
+	width: 800px;
+}

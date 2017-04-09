@@ -2,7 +2,7 @@
 if ($_POST["submit"] != "OK" || $_POST["login"] == "" ||
 			$_POST["oldpw"] == "" || $_POST["newpw"] == "") {
 	echo "ERROR\n";
-	echo "<br  /><a href=\"./index.html\">Retour</a>";
+	echo "<br  /><a href=\"./login_index.php\">Retour</a>";
 	return ;
 }
 $info_arr = array(
@@ -17,7 +17,7 @@ foreach($main_arr as &$elem)
 	{
 		$elem["passwd"] = $info_arr["newpw"];
 		file_put_contents("./private/passwd", serialize($main_arr));
-		header('Location: ./index.html');
+		header('Location: ./login_index.php');
 		return ;
 	}
 echo "ERROR\n";

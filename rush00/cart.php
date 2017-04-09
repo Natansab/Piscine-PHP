@@ -1,69 +1,52 @@
 <?php
 session_start();
-$login = $_SESSION['loggued_on_user'];
+	echo "current cart: <br />";
+	var_dump($_SESSION['cart']);
 
-include './ft_tools.php';
-
-## Handle delete product
-if ($_POST['submit'] == 'Delete') {
-	$id = $_POST['ID'];
-	$new_p_line = array($id, $_POST['Category'], $_POST['Price'], $_POST['Name'], $_POST['Description'], $_POST['Image'], 0);
-	change_value_csv('./tables/products_table', $id, $new_p_line);
-}
-
-## Handle modify product
-if ($_POST['submit'] == 'Modify') {
-	$id = $_POST['ID'];
-	$new_p_line = array($_POST['ID'], $_POST['Category'], $_POST['Price'], $_POST['Name'], $_POST['Description'], $_POST['Image'], 1);
-	change_value_csv('./tables/products_table', $id, $new_p_line);
-}
-
-## Handle add product
-if ($_POST['submit'] == 'Add') {
-	$fp = fopen('./tables/products_table.csv', 'r');
-	$flag = true;
-	while (($data = fgetcsv($fp)) !== FALSE) {
-		if ($flag) {
-			$flag = false;
-			continue ;}
-		$id_array[] = $data[0];}
-	fclose($fp);
-	$new_id = max($id_array) + 1;
-	$new_p_line = array($new_id, $_POST['Category'], $_POST['Price'], $_POST['Name'], $_POST['Description'], $_POST['Image'], 1);
-	$fp = fopen('./tables/products_table.csv', 'a');
-	fputcsv($fp, $new_p_line);
-	fclose($fp);
-}
+// Update Cart
+echo intval($_POST['id']);
+if ($_POST['less'] == '-')
+	$_SESSION['cart'][intval($_POST['id'])] -= 1;
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cart</title>
+	<title>Shope Homepage</title>
 	<link rel="stylesheet" type="text/css" href="./index.css"/>
 </head>
 <body>
-	<?php include('menu.php') ?>
 	<div id='wrapper'>
+		<?php include('menu.php') ?>
 		<div id='prducts_section'>
-			<h2>Current Cart</h2>
+			<h1>All products</h1>
 			<?php
-			$row = 1;
-			if (file_exists('./tables/carts_table.csv') &&
-					($handle = fopen('./tables/carts_table.csv', 'r')) !== FALSE) {
-				$flag = true;
-		    	while (($data = fgetcsv($handle)) !== FALSE)
-				{
-					if ($flag) {
-						$flag = false;
-						continue;}
-					if ($login = $data[1])
-					{
-						$cart_id = $data[0];
-						break;
-					}
-				}
-				fclose($handle);}
+			if (isset($_SESSION['cart'])) {
+			$conn = mysqli_connect($servername, $username, $password, "SHOP_DATABASE");
+			if (!$conn) {
+			    die("Connection failed: " . mysqli_connect_error());
+			}			foreach($_SESSION['cart'] as $id => $qty)
+			{
+			$sql = "SELECT * FROM Products WHERE id = $id";
+			$result = mysqli_query($conn, $sql);
+			if (mysqli_num_rows($result) > 0) {
+			$row = mysqli_fetch_assoc($result);
 			?>
+			<div class='product'>
+			<img class='img_product' src=<?php echo $row["img_path"] ?> /><br />
+			Product Name: <?php echo $row["name"] ?> <br />
+			Quantity: <?php echo $qty ?> <br />
+			Product ID: <?php echo $id ?> <br />
+			<form action='cart.php' method='post'>
+				<input type='hidden' name='id' value=<?php echo $id ?>>
+				<button name="less" value="-">-</button>
+				<button name="more" value="+">+</button>
+				<button name="remove" value="remove">Remove</button>
+			</form>
+			</form>
+			<br />
+			</div>
+		<?php }} mysqli_close($conn); }?>
+		</div>
 	</div>
 </body>
 </html>

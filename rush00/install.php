@@ -53,11 +53,12 @@ echo "<br  />";
 // Set Customers Table
 $sql = "CREATE TABLE IF NOT EXISTS Customers (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-login CHAR(255) NOT NULL,
-password VARCHAR(50) NOT NULL,
-name CHAR(50) NOT NULL,
-address CHAR(255) NOT NULL,
-admin INT(1)
+login VARCHAR(250) NOT NULL,
+password VARCHAR(250) NOT NULL,
+name VARCHAR(250) NOT NULL,
+address VARCHAR(250) NOT NULL,
+admin INT(1),
+status INT(1)
 )";
 
 echo "<br  />";
@@ -73,9 +74,9 @@ VALUES (15,'Truman - Blue','The Truman handle is designed (other than you.)','./
 $sql .= "INSERT INTO Products (price, name, description, img_path, is_active)
 VALUES (15,'Truman - Green','The Truman handle (other than you.)','./img/truman_green.jpg',1);";
 $sql .= "INSERT INTO Products (price, name, description, img_path, is_active)
-VALUES (15,'Truman - Orange','The Truman handle (other than you.)','./img/truman_orange.jpg',0);";
+VALUES (15,'Truman - Orange','The Truman handle (other than you.)','./img/truman_orange.jpg',1);";
 $sql .= "INSERT INTO Products (price, name, description, img_path, is_active)
-VALUES (15,'Winston - Silver','The Truman handle (other than you.)','./img/wilson_silver.jpg',0);";
+VALUES (15,'Winston - Silver','The Truman handle (other than you.)','./img/winston_silver.jpg',1);";
 
 if (mysqli_multi_query($conn, $sql)) {
     echo "New record created successfully";

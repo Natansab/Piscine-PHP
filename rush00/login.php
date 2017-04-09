@@ -8,6 +8,7 @@ if (auth($login, $passwd)) {
 	header('Location: ./index.php');
 	}
 else {
-	echo "ERROR\n";
+	echo "Wrong Login/Password<br />";
+	echo "<a href=\"./login_index.php\">Back to login</a>";
 	$_SESSION["loggued_on_user"] = "";}
 ?>

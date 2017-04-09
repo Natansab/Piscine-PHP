@@ -7,6 +7,6 @@
 	echo '<li class="welcome"> Bonjour '. $login . '</a></li>';
 }
 else
-	echo '<li><a href="./user_index.php">Log In</a></li>';
+	echo '<li><a href="./login_index.php">Log In</a></li>';
 ?>
 </ul>
