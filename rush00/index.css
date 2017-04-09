@@ -1,5 +1,10 @@
-.wrapper {
-	width: 800px;
+.cart_total {
+	clear: both;
+	text-align: right;
+}
+
+#wrapper {
+	width: 1000px;
 	margin: 0 auto;
 }
 
