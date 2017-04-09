@@ -5,7 +5,7 @@ if (isset($_SESSION['cart']))
 	$nb_items = array_sum($_SESSION['cart']);
 ?>
 <ul>
-	<li><a href="./index.php">Home</a></li>
+	<li><a href="./index.php">Shop</a></li>
 	<li><a href="./admin.php">Admin</a></li>
 	<li><a href="./cart.php">Cart (<?php echo $nb_items ?>)</a></li>
 <?php if (($login = $_SESSION["loggued_on_user"])) {

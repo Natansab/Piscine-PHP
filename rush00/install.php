@@ -70,10 +70,10 @@ if (mysqli_query($conn, $sql)) {
 echo "<br  />";
 
 // Set Orders Table
-$sql = "CREATE TABLE IF NOT EXISTS Customers (
+$sql = "CREATE TABLE IF NOT EXISTS Orders (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 login VARCHAR(250) NOT NULL,
-nb_of_produtcs INT(100) NOT NULL,
+nb_of_products INT(100) NOT NULL,
 total INT(250) NOT NULL,
 date VARCHAR(250) NOT NULL
 )";

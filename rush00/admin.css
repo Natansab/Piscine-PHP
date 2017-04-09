@@ -5,4 +5,5 @@
 
 .add_product_box, .manage_product_box {
 	width: 800px;
+	clear: both;
 }

@@ -9,7 +9,7 @@
 }
 
 .img_product {
-	width: 300px;
+	width: 200px;
 }
 
 .product {
@@ -49,4 +49,21 @@ li a:hover {
     text-decoration: none;
 	float: right;
 	background-color: #4CAF50;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+    text-align: right;
 }

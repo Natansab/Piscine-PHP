@@ -11,11 +11,11 @@ if (!$conn) {
 if ($_POST['submit'] == 'Delete') {
 	$id = intval($_POST['ID']);
 	$sql = "UPDATE Products SET is_active = 0 WHERE id = '$id'";
-	if (mysqli_query($conn, $sql)) {
-		echo "1Record updated successfully";
-	} else {
-		echo "2Error updating record: " . mysqli_error($conn);
-	}
+	// if (mysqli_query($conn, $sql)) {
+	// 	// echo "1Record updated successfully";
+	// } else {
+	// 	echo "2Error updating record: " . mysqli_error($conn);
+	// }
 }
 
 ## Handle modify product
@@ -62,10 +62,11 @@ if ($_POST['submit'] == 'Add') {
 	<link rel="stylesheet" type="text/css" href="./admin.css"/>
 </head>
 <body>
-	<?php include('menu.php') ?>
+
 	<div id='wrapper'>
-		<div id='prducts_section'>
+	<?php include('menu.php') ?>
 		<h1>Admin Page</h1>
+			<div>
 			<h2>Products</h2>
 			<h3>Manage Existing Products</h3>
 			<div class="manage_product_box">
@@ -105,9 +106,40 @@ if ($_POST['submit'] == 'Add') {
 						<br />
 					</form>
 				</div>
+			</div>
+			<div>
+				<h2>Users List</h2>
+				<?php
+				$sql = "SELECT * FROM Customers WHERE status = 1";
+				$result = mysqli_query($conn, $sql);
+					if (mysqli_num_rows($result) > 0) { ?>
+							<table>
+								<tr>
+									<th>Customer Login</td>
+									<th>Name</td>
+									<th>Shipping Address</td>
+									<th>Admin</td>
+									<th></td>
+								</tr>
+							<?php
+						while ($row = mysqli_fetch_assoc($result)) {?>
+								<tr>
+									<form>
+									<td><input name="login" value=<?php echo $row['id'] ?> /></td>
+									<td><input name="name" value=<?php echo $row['date'] ?> /></td>
+									<td><input name="shipp_add" value=<?php echo $row['nb_of_products'] ?>/></td>
+									<td><select><input name="admin" value=<?php echo $row['total'] ?></select></td>
+									</form>
+								</tr>
+	 					<?php ;};
+							echo "</table>";
+						}; ?>
+
+					while($row = mysqli_fetch_assoc($result)) {
+
 
 			</div>
-		</div>
 		<a href="./index.php">Back to homepage</a>
+		</div>
 	</body>
 	</html>

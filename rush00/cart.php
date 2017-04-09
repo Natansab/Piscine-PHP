@@ -2,8 +2,9 @@
 session_start();
 include 'ft_tools.php';
 // echo "current cart: <br />";
+$login = (isset($_SESSION["loggued_on_user"]) && $_SESSION["loggued_on_user"] != "") ? $_SESSION["loggued_on_user"] : "";
 // var_dump($_SESSION['cart']);
-// echo "user:" . $_SESSION["loggued_on_user"];
+// echo "user:" . $login;
 // Update Cart
 if ($_POST['less'] == '-')
 {
@@ -12,12 +13,27 @@ if ($_POST['less'] == '-')
 	else
 	($_SESSION['cart'][intval($_POST['id'])] = 0);
 }
+
 if ($_POST['more'] == '+')
 $_SESSION['cart'][intval($_POST['id'])] += 1;
+
 if ($_POST['remove'] == 'remove')
 $_SESSION['cart'][intval($_POST['id'])] = 0;
 
 // Buying process
+if ($_POST['submit'] == 'buy' && isset($_SESSION["loggued_on_user"]) &&
+		!$_SESSION["loggued_on_user"] == "" && isset($_SESSION['cart'])) {
+	$conn = mysqli_connect($servername, $username, $password, "SHOP_DATABASE");
+	$sql = "INSERT INTO Orders (login, nb_of_products, total, date)
+	VALUES ('".$_SESSION["loggued_on_user"]."','".array_sum($_SESSION['cart'])."', '".total_cart($_SESSION['cart'])."' , '".date("d-m-Y")."');";
+	// if (mysqli_query($conn, $sql)) {
+	//     echo "New record created successfully";
+	// } else {
+	//     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	// }
+	mysqli_close($conn);
+	$_SESSION['cart'] = NULL;
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,11 +44,9 @@ $_SESSION['cart'][intval($_POST['id'])] = 0;
 <body>
 	<div id='wrapper'>
 		<?php include('menu.php') ?>
-		<?php if (isset($_SESSION['cart'])) {?>
 			<div id="current_cart">
 				<h2>Current Cart</h2>
 				<?php
-				if (isset($_SESSION['cart'])) {
 					if (!$_SESSION['cart'] || !array_sum($_SESSION['cart']))
 					echo "Your cart is empty 👉 <a href=\"./index.php\">GO TO SHOP 🎉</a>";
 					else {
@@ -73,9 +87,34 @@ $_SESSION['cart'][intval($_POST['id'])] = 0;
 									<hr />
 								</div>
 							</div>
-							<?php }}}?>
-							<div id="archieved_carts">
-								<h2>Past Orders</h2>
+							<?php }?>
+
+
+				<div id="archieved_carts">
+				<h2>Past Orders</h2>
+				<?php
+				$conn = mysqli_connect($servername, $username, $password, "SHOP_DATABASE");
+				if (!$conn) {die("Connection failed: " . mysqli_connect_error());};
+				$result = mysqli_query($conn, "SELECT * FROM Orders WHERE login = '$login'");
+				if (mysqli_num_rows($result) > 0) {?>
+						<table>
+							<tr>
+								<th>Order # </td>
+								<th>Date Of Order</td>
+								<th># Products</td>
+								<th>Total Paid</td>
+							</tr>
+						<?php
+					while ($row = mysqli_fetch_assoc($result)) {?>
+							<tr>
+								<td><?php echo $row['id'] ?></td>
+								<td><?php echo $row['date'] ?></td>
+								<td><?php echo $row['nb_of_products'] ?></td>
+								<td>$<?php echo $row['total'] ?></td>
+							</tr>
+ 					<?php ;};
+						echo "</table>";
+					}; ?>
 							</div>
 						</div>
 					</body>
