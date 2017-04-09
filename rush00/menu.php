@@ -10,7 +10,7 @@ if (isset($_SESSION['cart']))
 	<li><a href="./cart.php">Cart (<?php echo $nb_items ?>)</a></li>
 <?php if (($login = $_SESSION["loggued_on_user"])) {
 	echo '<li><a href="./logout.php">Log Out</a></li>';
-	echo '<li class="welcome"> Bonjour '. $login . '</a></li>';
+	echo '<li class="welcome"> Hello '. $login . '😎👋</a></li>';
 }
 else
 	echo '<li><a href="./login_index.php">Log In</a></li>';

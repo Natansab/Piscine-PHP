@@ -11,6 +11,7 @@ $login = $_SESSION['loggued_on_user'];
 	<body>
 		<div id='wrapper'>
 				<?php include('menu.php') ?>
+				<h2>Log In</h2>
 		<form action ="login.php" method="POST">
 			<label for="login">Username: </label><input type="text" name="login" id="login" value =""/>
 			<br />
@@ -21,7 +22,6 @@ $login = $_SESSION['loggued_on_user'];
 		<br  />
 		<br  />
 		<a href="./create.html">Créer un compte</a><br />
-		<a href="./modif.html">Modifier mon mot de passe</a>
 	</div>
 	</body>
 </html>

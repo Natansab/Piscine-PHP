@@ -2,7 +2,7 @@
 session_start();
 include 'ft_tools.php';
 // echo "current cart: <br />";
-$login = (isset($_SESSION["loggued_on_user"]) && $_SESSION["loggued_on_user"] != "") ? $_SESSION["loggued_on_user"] : "";
+// $login = (isset($_SESSION["loggued_on_user"]) && $_SESSION["loggued_on_user"] != "") ? $_SESSION["loggued_on_user"] : "";
 // var_dump($_SESSION['cart']);
 // echo "user:" . $login;
 // Update Cart
@@ -26,11 +26,9 @@ if ($_POST['submit'] == 'buy' && isset($_SESSION["loggued_on_user"]) &&
 	$conn = mysqli_connect($servername, $username, $password, "SHOP_DATABASE");
 	$sql = "INSERT INTO Orders (login, nb_of_products, total, date)
 	VALUES ('".$_SESSION["loggued_on_user"]."','".array_sum($_SESSION['cart'])."', '".total_cart($_SESSION['cart'])."' , '".date("d-m-Y")."');";
-	// if (mysqli_query($conn, $sql)) {
-	//     echo "New record created successfully";
-	// } else {
-	//     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-	// }
+	if (mysqli_query($conn, $sql) == false) {
+	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	}
 	mysqli_close($conn);
 	$_SESSION['cart'] = NULL;
 	}
@@ -99,7 +97,7 @@ if ($_POST['submit'] == 'buy' && isset($_SESSION["loggued_on_user"]) &&
 				if (mysqli_num_rows($result) > 0) {?>
 						<table>
 							<tr>
-								<th>Order # </td>
+								<th>Order #</td>
 								<th>Date Of Order</td>
 								<th># Products</td>
 								<th>Total Paid</td>

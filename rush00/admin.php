@@ -7,53 +7,13 @@ if (!$conn) {
 	die("Connection failed: " . mysqli_connect_error());
 }
 
-## Handle delete product
-if ($_POST['submit'] == 'Delete') {
-	$id = intval($_POST['ID']);
-	$sql = "UPDATE Products SET is_active = 0 WHERE id = '$id'";
-	// if (mysqli_query($conn, $sql)) {
-	// 	// echo "1Record updated successfully";
-	// } else {
-	// 	echo "2Error updating record: " . mysqli_error($conn);
-	// }
-}
+require_once("./admin_products.php");
+require_once("./admin_customers.php");
+require_once("./admin_cats.php");
+require_once("./ft_tools.php");
 
-## Handle modify product
-if ($_POST['submit'] == 'Modify') {
-	$id = intval($_POST['ID']);
-
-	$category = mysqli_real_escape_string($conn, $_POST['Category']);
-	$price = intval($_POST['Price']);
-	$name = mysqli_real_escape_string($conn, $_POST['Name']);
-	$description = mysqli_real_escape_string($conn, $_POST['Description']);
-	$img_path = mysqli_real_escape_string($conn, $_POST['Image']);
-	$sql = "UPDATE Products
-	SET name = '$name', price = '$price', description = '$description', img_path = '$img_path'
-	WHERE id = '$id'";
-	if (mysqli_query($conn, $sql)) {
-		echo "Record updated successfully";
-	} else {
-		echo "Error updating record: " . mysqli_error($conn);
-	}
-}
-
-## Handle add product
-if ($_POST['submit'] == 'Add') {
-
-	$category = mysqli_real_escape_string($conn, $_POST['Category']);
-	$price = intval($_POST['Price']);
-	$name = mysqli_real_escape_string($conn, $_POST['Name']);
-	$description = mysqli_real_escape_string($conn, $_POST['Description']);
-	$img_path = mysqli_real_escape_string($conn, $_POST['Image']);
-	$sql = "INSERT INTO Products (price, name, description, img_path, is_active)
-	VALUES ('$price', '$name', '$description', '$img_path', 1)";
-	if (mysqli_query($conn, $sql)) {
-		echo "Record updated successfully";
-	} else {
-		echo "Error updating record: " . mysqli_error($conn);
-	}
-}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,7 +25,13 @@ if ($_POST['submit'] == 'Add') {
 
 	<div id='wrapper'>
 	<?php include('menu.php') ?>
+
 		<h1>Admin Page</h1>
+				<?php
+				if ($login == "" || !isset($_SESSION['loggued_on_user']) || !ft_is_admin($login)) {
+					echo "<h2>Access Is Not Allowed</h2>";
+				} else {?>
+<div>
 			<div>
 			<h2>Products</h2>
 			<h3>Manage Existing Products</h3>
@@ -78,13 +44,13 @@ if ($_POST['submit'] == 'Add') {
 						?>
 						<form action="admin.php" class="manage_product_item" method="POST">
 							<strong>Product #<?php echo $row["id"] ?><input type ='hidden' name='ID' value='<? echo $row["id"]?>' required/></strong><br />
-							Category:		<input type ='text' name='Category' value='<? echo $row["name"]?>' required /><br />
-							Price:			<input type ='text' name='Price' value='<? echo $row["price"]?>' required /><br />
+							Category:		<input type ='text' name='Category' value='<? echo get_cats_id($row['id'])?>' required /><br />
+							Price:			<input type ='number' name='Price' value='<? echo $row["price"]?>' required /><br />
 							Name:			<input type ='text' name='Name' value='<? echo $row["name"]?>' required /><br />
 							Description:	<input type ='text' name='Description' value='<? echo $row["description"]?>' required /><br />
 							Image:			<input type ='text' name='Image' value='<? echo $row["img_path"]?>'/><br required />
-							<input type="submit" name="submit" value="Modify"/>
-							<input type="submit" name="submit" value="Delete"/>
+							<input type="submit" name="product_mdfy" value="Modify"/>
+							<input type="submit" name="product_delete" value="Delete"/>
 							<br />
 							<br />
 						</form>
@@ -97,18 +63,18 @@ if ($_POST['submit'] == 'Add') {
 					<form action ="admin.php" method="POST">
 						<strong>New Product:</strong><br />
 						Category:		<input type ='text' name='Category' value='' required /><br />
-						Price:			<input type ='text' name='Price' value='' required /><br />
+						Price:			<input type ='number' name='Price' value='' required /><br />
 						Name:			<input type ='text' name='Name' value='' required /><br />
 						Description:	<input type ='text' name='Description' value='' required /><br />
 						Image:			<input type ='text' name='Image' value=''/><br required />
-						<input type="submit" name="submit" value="Add"/>
+						<input type="submit" name="product_add" value="Add"/>
 						<br />
 						<br />
 					</form>
 				</div>
 			</div>
 			<div>
-				<h2>Users List</h2>
+				<h2>Users</h2>
 				<?php
 				$sql = "SELECT * FROM Customers WHERE status = 1";
 				$result = mysqli_query($conn, $sql);
@@ -119,27 +85,78 @@ if ($_POST['submit'] == 'Add') {
 									<th>Name</td>
 									<th>Shipping Address</td>
 									<th>Admin</td>
-									<th></td>
+									<th>Manage</td>
 								</tr>
 							<?php
 						while ($row = mysqli_fetch_assoc($result)) {?>
 								<tr>
-									<form>
-									<td><input name="login" value=<?php echo $row['id'] ?> /></td>
-									<td><input name="name" value=<?php echo $row['date'] ?> /></td>
-									<td><input name="shipp_add" value=<?php echo $row['nb_of_products'] ?>/></td>
-									<td><select><input name="admin" value=<?php echo $row['total'] ?></select></td>
+									<form action="admin.php" method="POST">
+									<td><input name="login" type="hidden" value="<?php echo $row['login']?>"/><?php echo $row['login']?></td>
+									<td><input name="name" value="<?php echo $row['name']?>" ></td>
+									<td><input name="shipp_add" value="<?php echo $row['address']?>"></td>
+									<td><select name="admin">
+										<? if ($row['admin'] == 1) {?>
+										<option name="admin" value="1">Yes</option>
+										<option name="admin" value="0">No</option>
+										<?php }
+										else {?>
+										<option name="admin" value="0">No</option>
+										<option name="admin" value="1">Yes</option>
+										<?php } ?>
+										</select>
+									</td>
+									<td>
+										<input type="submit" name="customer_mdfy" value="Modify"/>
+										<input type="submit" name="customer_delete" value="Delete"/>
+									</td>
 									</form>
 								</tr>
 	 					<?php ;};
 							echo "</table>";
 						}; ?>
-
-					while($row = mysqli_fetch_assoc($result)) {
-
-
 			</div>
-		<a href="./index.php">Back to homepage</a>
+						<div>
+							<h2>Categories</h2>
+							<?php
+							$sql = "SELECT * FROM Categories";
+							$result = mysqli_query($conn, $sql);
+								if (mysqli_num_rows($result) > 0) { ?>
+										<table>
+											<tr>
+												<th>ID</td>
+												<th>Name</td>
+												<th>Manage</td>
+											</tr>
+
+										<?php
+									while ($row = mysqli_fetch_assoc($result)) {?>
+											<form action="admin.php" method="POST">
+											<tr>
+												<td><input name="id" type="hidden" value="<?php echo $row['id']?>"/>ID: "<?php echo $row['id']?>"</td>
+												<td><input name="name" value="<?php echo $row['name']?>" ></td>
+												<td>
+													<input type="submit" name="cat_mdfy" value="Modify"/>
+													<input type="submit" name="cat_delete" value="Delete"/>
+												</td>
+											</tr>
+											</form>
+				 					<?php ;}; ?>
+											<form action="admin.php" method="POST">
+											<tr>
+												<td><input type="hidden" value="NEXT ID">SOON:</td>
+												<td><input name="name" value="New Category" ></td>
+												<td>
+													<input type="submit" name="cat_add" value="Add"/>
+												</td>
+											</form>
+											</tr>
+
+										</table>
+									<?php	mysqli_close($conn);
+								};} ?>
+						</div>
+			<br />
 		</div>
+	</div>
 	</body>
 	</html>

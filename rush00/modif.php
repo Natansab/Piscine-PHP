@@ -1,4 +1,6 @@
 <?php
+if (file_exists("./private/passwd")) {
+
 if ($_POST["submit"] != "OK" || $_POST["login"] == "" ||
 			$_POST["oldpw"] == "" || $_POST["newpw"] == "") {
 	echo "ERROR\n";
@@ -21,4 +23,5 @@ foreach($main_arr as &$elem)
 		return ;
 	}
 echo "ERROR\n";
+}
 ?>
