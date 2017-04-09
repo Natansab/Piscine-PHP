@@ -28,17 +28,17 @@ $name = mysqli_real_escape_string($conn, $_POST['name']);
 $shipp_add = mysqli_real_escape_string($conn, $_POST['shipp_add']);
 $admin = ($_POST['admin'] == "42") ? 1 : 0;
 $sql = "INSERT INTO Customers (login, password, name, address, admin, status)
-VALUES ('$login', '$password', '$name', '$shipp_add', '$admin', 1);";
+VALUES ('".$login."', '".$password."', '".$name."', '".$shipp_add."', '".$admin."', 1);";
 
 $main_arr[] = $info_arr;
 file_put_contents("./private/passwd", serialize($main_arr));
 
-
-// if (mysqli_query($conn, $sql)) {
-//     echo "New record created successfully";
-// } else {
-//     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-// }
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully<br />";
+	echo "Log In <a href=\"./login_index.php\">here</a>";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 mysqli_close($conn);
-header('Location: ./login_index.php');
+// header('Location: ./login_index.php');
 ?>
