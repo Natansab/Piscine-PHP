@@ -1,1 +1,1 @@
-CREATE DATABASE `db_nsabbah`;
+CREATE DATABASE db_nsabbah;
