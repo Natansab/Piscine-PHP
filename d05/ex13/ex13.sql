@@ -1,4 +1,3 @@
-SELECT nom, prenom
-FROM fiche_personne
-WHERE nom LIKE '%-%' OR prenom LIKE '%-%'
-ORDER BY nom, prenom;
+SELECT ROUND(AVG(nbr_siege), 0)
+AS 'moyenne'
+FROM salle;
