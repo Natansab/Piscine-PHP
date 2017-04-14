@@ -1,4 +1,4 @@
-<?php
+9<?php
 abstract class Fighter {
 
 	public $type;

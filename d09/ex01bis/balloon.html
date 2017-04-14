@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+	<script>
+
+		function ChangeColor (direction) {
+			dom = document.getElementById("balloon");
+		    color = dom.style.backgroundColor;
+			if (direction == "asc") {
+			    if (color == "red")
+			        dom.style.backgroundColor = "green";
+			    else if (color == "green")
+			        dom.style.backgroundColor = "blue";
+			    else
+			        dom.style.backgroundColor = "red";
+			}
+			else if (direction == "desc") {
+			    if (color == "red")
+			        dom.style.backgroundColor = "blue";
+			    else if (color == "blue")
+			        dom.style.backgroundColor = "green";
+			    else
+			        dom.style.backgroundColor = "red";
+			}
+		}
+
+		function ChangeSize(direction) {
+			dom = document.getElementById("balloon");
+			bln_width = $(#balloon).style.width;
+			if (direction == 'asc') {
+				if (parseInt(bln_width) < 420) {
+					dom.style.width = parseInt(bln_width) + 10 + "px";
+					dom.style.height = dom.style.width;
+				}
+				else {
+					dom.style.width = "220px";
+					dom.style.height = "220px";
+				}
+			}
+			else if (direction == 'desc') {
+				dom.style.width = (parseInt(bln_width) > 200) ? parseInt(bln_width) - 5 + "px" : dom.style.width;
+				dom.style.height = dom.style.width;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div onclick="ChangeColor('asc');ChangeSize('asc')" onmouseout="ChangeColor('desc');ChangeSize('desc')" id="balloon" style="background-color: red;width: 200px;height: 200px;border-radius: 1000px;margin: auto;"></div>
+</body>
+</html>

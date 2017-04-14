@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculons !</title>
+	<script>
+		setInterval(function(){ alert("Please, use me..."); }, 30000);
+
+		function Calc() {
+			nb1 = document.getElementById("nb1").value;
+			nb2 = document.getElementById("nb2").value;
+			op = document.getElementById("op").value;
+			result = 'WTF?!';
+
+			if (/^\d+$/.test(nb1) == false || /^\d+$/.test(nb2) == false) {
+				alert('Error :(');
+				console.log('Error :(');
+				return ;}
+
+			if ((op == "%" || op == "/") && nb2 == 0) {
+				alert('It’s over 9000!');
+				console.log('It’s over 9000!');
+				return ;}
+
+			if (op == '+')
+				result = parseInt(nb1) + parseInt(nb2);
+			else if (op == '-')
+				result = parseInt(nb1) - parseInt(nb2);
+			else if (op == '*')
+				result = parseInt(nb1) * parseInt(nb2);
+			else if (op == '/')
+				result = parseInt(nb1) / parseInt(nb2);
+			else if (op == '%')
+				result = parseInt(nb1) % parseInt(nb2);
+			alert(result);
+			console.log(result);
+		}
+	</script>
+</head>
+<body>
+	<input id="nb1" type="text" value=""/>
+	<select id="op">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input id="nb2" type="text" value=""/>
+	<input onclick="Calc()" type="submit" value="Try me!"/>
+</body>
+</html>
