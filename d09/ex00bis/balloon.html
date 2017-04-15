@@ -1,75 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript</title>
+	<title>Balloon - jQuery</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script>
-
 		$(document).ready(function(){
-			function ChangeColor2($direction) {
-				dom = $("#balloon");
-			    color = dom.style.backgroundColor;
-				if ($direction == "asc") {
-				    if (color == "red")
-				        dom.style.backgroundColor = "green";
-				    else if (color == "green")
-				        dom.style.backgroundColor = "blue";
-				    else
-				        dom.style.backgroundColor = "red";
-				}
-				else if (direction == "desc") {
-				    if (color == "red")
-				        dom.style.backgroundColor = "blue";
-				    else if (color == "blue")
-				        dom.style.backgroundColor = "green";
-				    else
-				        dom.style.backgroundColor = "red";
-				}
-			}
-	});
-
-		function ChangeColor (direction) {
-			dom = document.getElementById("balloon");
-		    color = dom.style.backgroundColor;
-			if (direction == "asc") {
-			    if (color == "red")
-			        dom.style.backgroundColor = "green";
-			    else if (color == "green")
-			        dom.style.backgroundColor = "blue";
-			    else
-			        dom.style.backgroundColor = "red";
-			}
-			else if (direction == "desc") {
-			    if (color == "red")
-			        dom.style.backgroundColor = "blue";
-			    else if (color == "blue")
-			        dom.style.backgroundColor = "green";
-			    else
-			        dom.style.backgroundColor = "red";
-			}
-		}
-
-		function ChangeSize(direction) {
-			dom = document.getElementById("balloon");
-			bln_width = dom.style.width;
-			if (direction == 'asc') {
-				if (parseInt(bln_width) < 420) {
-					dom.style.width = parseInt(bln_width) + 10 + "px";
-					dom.style.height = dom.style.width;
-				}
-				else {
-					dom.style.width = "220px";
-					dom.style.height = "220px";
-				}
-			}
-			else if (direction == 'desc') {
-				dom.style.width = (parseInt(bln_width) > 200) ? parseInt(bln_width) - 5 + "px" : dom.style.width;
-				dom.style.height = dom.style.width;
-			}
-		}
+			var i = 0;
+			var colors = ["red", "green", "blue"];
+			$("#balloon").click(function() {
+				i = ++i % 3;
+				$("#balloon").css("background-color", colors[i]);
+				$("#balloon").width(function(a, c) {
+					return ((c < 420) ? c + 20 : 200);
+				});
+				$("#balloon").height(function(a, c) {
+					return ((c < 420) ? c + 20 : 200);
+				});
+			});
+			$("#balloon").mouseout(function() {
+				i = ((--i % 3) + 3) % 3;
+				$("#balloon").css("background-color", colors[i]);
+				$("#balloon").width(function(a, c) {
+					return ((c > 200) ? c - 5 : c);
+				});
+				$("#balloon").height(function(a, c) {
+					return ((c > 200) ? c - 5 : c);
+				});
+			});
+		});
 	</script>
 </head>
 <body>
-	<div onclick="ChangeColor2('asc');ChangeSize('asc')" onmouseout="ChangeColor('desc');ChangeSize('desc')" id="balloon" style="background-color: red;width: 200px;height: 200px;border-radius: 1000px;margin: auto;"></div>
+	<div id="balloon" style="background-color: red;width: 200px;height: 200px;border-radius: 100%;margin: auto;"></div>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculons !</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script>
+		setInterval(function(){ alert("Please, use me..."); }, 30000);
+
+		$(document).ready(function() {
+			$("#compute").click(function() {
+			nb1 = $("#nb1").val();
+			nb2 = $("#nb2").val();
+			op = $("#op").val();
+			result = 'WTF?!';
+
+			if (/^\d+$/.test(nb1) == false || /^\d+$/.test(nb2) == false) {
+				alert('Error :(');
+				console.log('Error :(');
+				return ;}
+
+			if ((op == "%" || op == "/") && nb2 == 0) {
+				alert('It’s over 9000!');
+				console.log('It’s over 9000!');
+				return ;}
+
+			if (op == '+')
+				result = parseInt(nb1) + parseInt(nb2);
+			else if (op == '-')
+				result = parseInt(nb1) - parseInt(nb2);
+			else if (op == '*')
+				result = parseInt(nb1) * parseInt(nb2);
+			else if (op == '/')
+				result = parseInt(nb1) / parseInt(nb2);
+			else if (op == '%')
+				result = parseInt(nb1) % parseInt(nb2);
+			alert(result);
+			console.log(result);
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<input id="nb1" type="text" value=""/>
+	<select id="op">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input id="nb2" type="text" value=""/>
+	<input id="compute" type="submit" value="Try me!"/>
+</body>
+</html>
