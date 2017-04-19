@@ -1,0 +1,764 @@
+Array
+(
+    [0] => Array
+        (
+            [0] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-soutard-2013-2017/201710143/">CHÂTEAU SOUTARD</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">30 à 50 €</div>
+            [1] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-tauzinat-l-hermitage-2013-2017/201723163/">CHÂTEAU TAUZINAT L'HERMITAGE</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">15 à 20 €</div>
+            [2] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-tour-saint-christophe-2013-2017/201710164/">CHÂTEAU TOUR SAINT-CHRISTOPHE</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">20 à 30 €</div>
+            [3] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-tour-de-capet-2013-2017/201723165/">CHÂTEAU TOUR DE CAPET</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">11 à 15 €</div>
+            [4] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-tour-de-pressac-2013-2017/201710109/">CHÂTEAU TOUR DE PRESSAC</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">15 à 20 €</div>
+            [5] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-trianon-2013-2017/201723174/">CHÂTEAU TRIANON</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">20 à 30 €</div>
+            [6] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-troplong-mondot-2013-2017/201723232/">CHÂTEAU TROPLONG MONDOT</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">75 à 100 €</div>
+            [7] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-trotte-vieille-2013-2017/201705731/">CHÂTEAU TROTTE VIEILLE</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">+ de 100 €</div>
+            [8] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-valade-2013-2017/201706593/">CHÂTEAU VALADE</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">20 à 30 €</div>
+            [9] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-vieille-tour-la-rose-2013-2017/201723180/">CHÂTEAU VIEILLE TOUR LA ROSE</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">8 à 11 €</div>
+            [10] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-vieux-sarpe-2013-2017/201723182/">CHÂTEAU VIEUX SARPE</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">20 à 30 €</div>
+            [11] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-vignot-2013-2017/201723107/">CHÂTEAU VIGNOT</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">30 à 50 €</div>
+            [12] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-villhardy-2013-2017/201706126/">CHÂTEAU VILLHARDY</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">30 à 50 €</div>
+            [13] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-yon-figeac-2013-2017/201703000/">CHÂTEAU YON-FIGEAC</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">20 à 30 €</div>
+            [14] => <div class="item">
+                        <div class="wine-type">
+                            <i class="icon icon-wine-rouge-tranquille"
+                               title="rouge tranquille"></i>
+
+                            <div class="text">
+                                Vin rouge tranquille
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="header">
+                                <div class="title"><a href="http://www.hachette-vins.com/guide-vins/les-vins/ch-de-candale-2013-2017/201700703/">CHÂTEAU DE CANDALE</a></div>
+
+                                <div class="meta">
+                                    <span class="year"> 2013</span>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="meta">
+                                    <span class="year">Guide 2017</span>
+                                    <span class="rating"><i class="icon icon-lock-black"></i> </span>
+                                </div>
+
+                                <div class="sub visible-phone">Vin rouge tranquille</div>
+
+                                <div class="notice">
+                                                                                                                                                                        <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+                                <i class="icon icon-circle-gray"></i>
+            <span class="small">- 0 avis</span>                                                                    </div>
+
+                                <div class="content">
+                                    <a href="/tout-sur-le-vin/regions-vins/80/bordelais">Bordelais</a> &bull;
+                                    <a href="/tout-sur-le-vin/appellations-vins/50/saint-emilion-grand-cru">Saint-émilion grand cru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                    <div class="footer">
+                                <div class="price">30 à 50 €</div>
+        )
+
+    [1] => Array
+        (
+            [0] => http://www.hachette-vins.com/guide-vins/les-vins/ch-soutard-2013-2017/201710143/
+            [1] => http://www.hachette-vins.com/guide-vins/les-vins/ch-tauzinat-l-hermitage-2013-2017/201723163/
+            [2] => http://www.hachette-vins.com/guide-vins/les-vins/ch-tour-saint-christophe-2013-2017/201710164/
+            [3] => http://www.hachette-vins.com/guide-vins/les-vins/ch-tour-de-capet-2013-2017/201723165/
+            [4] => http://www.hachette-vins.com/guide-vins/les-vins/ch-tour-de-pressac-2013-2017/201710109/
+            [5] => http://www.hachette-vins.com/guide-vins/les-vins/ch-trianon-2013-2017/201723174/
+            [6] => http://www.hachette-vins.com/guide-vins/les-vins/ch-troplong-mondot-2013-2017/201723232/
+            [7] => http://www.hachette-vins.com/guide-vins/les-vins/ch-trotte-vieille-2013-2017/201705731/
+            [8] => http://www.hachette-vins.com/guide-vins/les-vins/ch-valade-2013-2017/201706593/
+            [9] => http://www.hachette-vins.com/guide-vins/les-vins/ch-vieille-tour-la-rose-2013-2017/201723180/
+            [10] => http://www.hachette-vins.com/guide-vins/les-vins/ch-vieux-sarpe-2013-2017/201723182/
+            [11] => http://www.hachette-vins.com/guide-vins/les-vins/ch-vignot-2013-2017/201723107/
+            [12] => http://www.hachette-vins.com/guide-vins/les-vins/ch-villhardy-2013-2017/201706126/
+            [13] => http://www.hachette-vins.com/guide-vins/les-vins/ch-yon-figeac-2013-2017/201703000/
+            [14] => http://www.hachette-vins.com/guide-vins/les-vins/ch-de-candale-2013-2017/201700703/
+        )
+
+    [2] => Array
+        (
+            [0] => CHÂTEAU SOUTARD
+            [1] => CHÂTEAU TAUZINAT L'HERMITAGE
+            [2] => CHÂTEAU TOUR SAINT-CHRISTOPHE
+            [3] => CHÂTEAU TOUR DE CAPET
+            [4] => CHÂTEAU TOUR DE PRESSAC
+            [5] => CHÂTEAU TRIANON
+            [6] => CHÂTEAU TROPLONG MONDOT
+            [7] => CHÂTEAU TROTTE VIEILLE
+            [8] => CHÂTEAU VALADE
+            [9] => CHÂTEAU VIEILLE TOUR LA ROSE
+            [10] => CHÂTEAU VIEUX SARPE
+            [11] => CHÂTEAU VIGNOT
+            [12] => CHÂTEAU VILLHARDY
+            [13] => CHÂTEAU YON-FIGEAC
+            [14] => CHÂTEAU DE CANDALE
+        )
+
+    [3] => Array
+        (
+            [0] =>  2013
+            [1] =>  2013
+            [2] =>  2013
+            [3] =>  2013
+            [4] =>  2013
+            [5] =>  2013
+            [6] =>  2013
+            [7] =>  2013
+            [8] =>  2013
+            [9] =>  2013
+            [10] =>  2013
+            [11] =>  2013
+            [12] =>  2013
+            [13] =>  2013
+            [14] =>  2013
+        )
+
+    [4] => Array
+        (
+            [0] => <i class="icon icon-lock-black"></i> 
+            [1] => <i class="icon icon-lock-black"></i> 
+            [2] => <i class="icon icon-lock-black"></i> 
+            [3] => <i class="icon icon-lock-black"></i> 
+            [4] => <i class="icon icon-lock-black"></i> 
+            [5] => <i class="icon icon-lock-black"></i> 
+            [6] => <i class="icon icon-lock-black"></i> 
+            [7] => <i class="icon icon-lock-black"></i> 
+            [8] => <i class="icon icon-lock-black"></i> 
+            [9] => <i class="icon icon-lock-black"></i> 
+            [10] => <i class="icon icon-lock-black"></i> 
+            [11] => <i class="icon icon-lock-black"></i> 
+            [12] => <i class="icon icon-lock-black"></i> 
+            [13] => <i class="icon icon-lock-black"></i> 
+            [14] => <i class="icon icon-lock-black"></i> 
+        )
+
+    [5] => Array
+        (
+            [0] => 30 à 50 €
+            [1] => 15 à 20 €
+            [2] => 20 à 30 €
+            [3] => 11 à 15 €
+            [4] => 15 à 20 €
+            [5] => 20 à 30 €
+            [6] => 75 à 100 €
+            [7] => + de 100 €
+            [8] => 20 à 30 €
+            [9] => 8 à 11 €
+            [10] => 20 à 30 €
+            [11] => 30 à 50 €
+            [12] => 30 à 50 €
+            [13] => 20 à 30 €
+            [14] => 30 à 50 €
+        )
+
+)
+
+Warning: fclose() expects parameter 1 to be resource, null given in /Users/nsabbah/Documents/Piscine_PHP/github/d02/ex04/scrapping_solal/scrapping.php on line 57
