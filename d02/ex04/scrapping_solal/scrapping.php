@@ -11,49 +11,47 @@ $links = file($file_path);
 // 	echo "data.csv existe deja\n";
 // 	return ;
 // }
-// $fp = fopen("./data.csv", "w");
-// fputcsv($fp, array("url", "nom_vin", "annee", "nb_etoiles", "coup_de_coeur"));
+$fp = fopen("./data.csv", "w");
+fputcsv($fp, array("num_page","url", "nom_vin", "annee", "nb_etoiles", "prix", "coup de coeur"));
 // foreach($links as $fields)
 // 	fputcsv($fp, array($fields));
 // fclose($fp);
 
-//username and password of account
-$username = "solal.sabbah@gmail.com";
-$password = "galouskab132";
-
-//login form action url
-$url="http://www.hachette-vins.com/login_check";
-$postinfo = "_username=".$username."&_password=".$password;
-
-$cookie_file_path = "./cookie.txt";
+$url = "http://www.hachette-vins.com/login_check";
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_HEADER, false);
-curl_setopt($ch, CURLOPT_NOBODY, false);
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-
-curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_file_path);
-//set the cookie the site has for certain features, this is optional
-curl_setopt($ch, CURLOPT_COOKIE, "cookiename=0");
-curl_setopt($ch, CURLOPT_USERAGENT,
-    "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.7.12) Gecko/20050915 Firefox/1.0.7");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_REFERER, $_SERVER['REQUEST_URI']);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+curl_setopt($ch, CURLOPT_URL, $url);
+$cookie = 'cookies.txt';
+$timeout = 30;
+curl_setopt ($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_TIMEOUT,         10);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT,  $timeout );
+curl_setopt($ch, CURLOPT_COOKIEJAR,       $cookie);
+curl_setopt($ch, CURLOPT_COOKIEFILE,      $cookie);
 
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postinfo);
-curl_exec($ch);
+curl_setopt ($ch, CURLOPT_POST, 1);
+curl_setopt ($ch,CURLOPT_POSTFIELDS,"_username=xxx&_password=xxx&_csrf_token=c55623574318681da51e350df25bad462a34ebab");
+// $str = curl_exec($ch);
 
-$c = curl_init("http://www.hachette-vins.com/vins/page-62/list/?filtre%5Bedition%5D=2017&filtre%5Bregion%5D=Bordelais&filtre%5Bcouleur%5D=rouge");
-curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-$str = curl_exec($c);
-curl_close($c);
-preg_match_all ('/<div class="item">\n[" "]*<div class="wine-type">.*?<div class="title"><a href="(.*?)">(.*?)<\/a><\/div>.*?"year">(.*?)<.*?<span class="rating">(.*?)<\/span>.*?"price">(.*?)<\/div>/s',$str,$matches);
-print_r($matches);
-fclose($fp);
+for($page_nb = 1; $page_nb <= 67; $page_nb++) {
+	$url = "http://www.hachette-vins.com/vins/page-" . $page_nb . "/list/?filtre%5Bedition%5D=2017&filtre%5Bregion%5D=Bordelais&filtre%5Bcouleur%5D=rouge";
+	curl_setopt($ch, CURLOPT_URL, $url);
+	$str = curl_exec($ch);
+
+	preg_match_all ('/<div class="item">\n[" "]*<div class="wine-type">.*?<div class="title"><a href="(.*?)">(.*?)<\/a><\/div>.*?"year">(.*?)<.*?<span class="rating">(.*?)<\/span>.*?"price">(.*?)<\/div>/s',$str,$matches);
+
+	for ($i = 0; $i <= 14; $i++) {
+		$nb_etoiles = preg_match_all('/(red)/',$matches[4][$i], $nw);
+		$url = $matches[1][$i];
+		curl_setopt($ch, CURLOPT_URL, $url);
+		$str = curl_exec($ch);
+		$fav = (preg_match_all('/(icon icon-heart-red)/', $str, $nw) == 1) ? "oui" : "non";
+		echo $fav . "\n";
+		fputcsv($fp, array($page_nb, $matches[1][$i], $matches[2][$i], $matches[3][$i], $nb_etoiles, $matches[5][$i], $fav));
+	}
+}
+
+// fclose($fp);
 
 ?>
